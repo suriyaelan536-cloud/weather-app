@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sky Notes | Weather App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="top">
+      <div class="logo">☁</div>
+      <div>
+        <p class="eyebrow">A LITTLE LOOK AT THE SKY</p>
+        <h1>Sky Notes</h1>
+        <p class="subtitle">Check the weather, plan your day.</p>
+      </div>
+    </header>
+
+    <section class="search-card">
+      <label for="city-input">Find a city</label>
+      <form id="search-form">
+        <input id="city-input" type="text" placeholder="Try Chennai, London, Tokyo..." autocomplete="off" required>
+        <button type="submit" id="search-button">Search</button>
+      </form>
+      <p class="hint">Tip: Enter a city name in English.</p>
+    </section>
+
+    <p id="message" class="message" role="status" aria-live="polite">Search for a city to see its current weather.</p>
+
+    <section id="weather-card" class="weather-card" hidden>
+      <div class="weather-head">
+        <div>
+          <p id="location-label" class="location-label">CITY, COUNTRY</p>
+          <p id="local-time" class="local-time"></p>
+        </div>
+        <span id="weather-icon" class="weather-icon" aria-hidden="true">☀️</span>
+      </div>
+      <div class="temperature-row">
+        <p id="temperature" class="temperature">--°</p>
+        <div>
+          <p id="condition" class="condition">Clear sky</p>
+          <p id="feels-like" class="feels-like">Feels like --°C</p>
+        </div>
+      </div>
+      <div class="details">
+        <div class="detail"><span>💧 Humidity</span><strong id="humidity">--%</strong></div>
+        <div class="detail"><span>💨 Wind</span><strong id="wind">-- km/h</strong></div>
+        <div class="detail"><span>🌡️ Feels like</span><strong id="detail-feels">--°C</strong></div>
+      </div>
+      <p class="source-note">Weather data provided by Open-Meteo.</p>
+    </section>
+
+    <section class="tip-card">
+      <span class="tip-icon" aria-hidden="true">🌱</span>
+      <div>
+        <p class="eyebrow">A SMALL REMINDER</p>
+        <h2>Make room for the day.</h2>
+        <p>Check the forecast before heading out, and carry what you need for the weather.</p>
+      </div>
+    </section>
+
+    <footer>Made for curious minds · HTML, CSS & JavaScript</footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
